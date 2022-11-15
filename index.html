@@ -10,7 +10,9 @@
         body {
             background-color: #FA4A4A;
             font-family: 'Arial', sans-serif;
+            font-size: 14px;
             margin: 0;
+            display: flex;
         }
 
         .background {
@@ -64,7 +66,7 @@
         }
 
         .line2 {
-            font-size: 12rem;
+            font-size: 9rem;
             color: white;
             text-transform: uppercase;
         }
@@ -85,19 +87,7 @@
             padding: 0.5rem 5rem;
         }
 
-        a:link {
-            text-decoration: none;
-        }
-
-        a:visited {
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: none;
-        }
-
-        a:active {
+        a:active, a:hover, a:visited, a:link {
             text-decoration: none;
         }
 
@@ -110,7 +100,6 @@
 
         .line4 div {
             font-size: 2rem;
-
         }
 
         .line4 input {
@@ -140,6 +129,39 @@
             padding-top: 15px;
             color: #FFF;
         }
+
+        @media only screen and (max-width: 600px) {
+            .overlay {
+                height: 100vh;
+            }
+
+            .hidden-mobile {
+                display: none;
+            }
+
+            .line1 {
+                font-size: 3rem;
+            }
+
+            .line2 {
+                font-size: 4rem;
+            }
+
+            .line3 a {
+                padding: 15px;
+                font-size: 1.5rem;
+            }
+
+            .line4 div {
+                font-size: 1.5rem;
+            }
+
+            .line6 {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+        }
     </style>
 </head>
 <body>
@@ -160,12 +182,14 @@
     <div class="line5">
         Powered by <img src="imgs/4x/logo.png" alt="red bison logo">
     </div>
-    <div class="line6">
-        <span>101 S. Tryon, Charlotte, North Carolina</span>
+    <div class="footer">
+        <div class="line6">
+            <span>101 S. Tryon, Charlotte, North Carolina</span>
+        </div>
     </div>
 </div>
 <div class="background">
-    <div class="col">
+    <div class="col hidden-mobile">
         <div class="row"><img src="./imgs/4x/left-top.png" alt=""></div>
         <div class="row"><img src="./imgs/4x/left-middle.png" alt=""></div>
         <div class="row"><img src="./imgs/4x/left-bottom.png" alt=""></div>
@@ -174,7 +198,7 @@
         <div class="row"><img src="./imgs/4x/center-top.png" alt=""></div>
         <div class="row"><img src="./imgs/4x/center-bottom.png" alt=""></div>
     </div>
-    <div class="col">
+    <div class="col hidden-mobile">
         <div class="row"><img src="./imgs/4x/right-top.png" alt=""></div>
         <div class="row"><img src="./imgs/4x/right-middle.png" alt=""></div>
         <div class="row"><img src="./imgs/4x/right-bottom.png" alt=""></div>
